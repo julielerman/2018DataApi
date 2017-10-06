@@ -35,9 +35,7 @@ namespace SamuraiApp.Domain {
       IsDirty=true;
     }
     public string EntranceScene => _entrance?.SceneName;
-    #endregion
-
-    #region demonstrates private value object with public methods to control how values are set and accessed
+    
     private PersonFullName SecretIdentity { get; set; }
     public string RevealSecretIdentity () {
       if (SecretIdentity.IsEmpty ()) {
@@ -50,6 +48,5 @@ namespace SamuraiApp.Domain {
       SecretIdentity = PersonFullName.Create (first, last);
       IsDirty=true;
     }
-    #endregion
   }
 }
