@@ -4,8 +4,6 @@ namespace SamuraiApp.Domain
 {
   public class Quote
   {
-    private Guid guidId;
-    private string quoteText;
     
     public Quote (Guid samuraiGuidId,string text) {
       Text = text;
