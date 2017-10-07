@@ -4,19 +4,19 @@ namespace Firefly.Domain
 {
   public class Entrance
   {
-     public Entrance (Guid samuraiGuidId,int movieMinute, string sceneName, string description) {
+     public Entrance (Guid characterGuidId,int movieMinute, string sceneName, string description) {
       MovieMinute = movieMinute;
       SceneName = sceneName;
       ActionDescription = description;
-      SamuraiGuidId=samuraiGuidId;
+      CharacterGuidId=characterGuidId;
     }
     public int Id { get; private set; }
     public int MovieMinute { get; private set; }
     public string SceneName { get; private set; }
     public string ActionDescription { get; private set; }
-    public Guid SamuraiGuidId{get;private set;}
+    public Guid CharacterGuidId{get;private set;}
     //hidden ORM "concessions"
-     private int SamuraiId { get;  set; }
+     private int characterId { get;  set; }
      private Entrance() { } 
   }
 }
