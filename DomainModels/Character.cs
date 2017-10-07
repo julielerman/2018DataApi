@@ -24,6 +24,7 @@ namespace SamuraiApp.Domain {
     private readonly List<Quote> _quotes = new List<Quote> ();
     public IEnumerable<Quote> Quotes => _quotes.ToList ();
     public void AddQuote (string quoteText) {
+       quoteText=StringManipulators.ReplaceBadWordWithAsterisks(quoteText);
       _quotes.Add (new Quote(GuidId,quoteText));
       IsDirty=true;
     }
