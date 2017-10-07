@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SamuraiApp.Domain {
+namespace Firefly.Domain {
   public class Character {
    
     

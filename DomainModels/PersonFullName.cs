@@ -1,7 +1,7 @@
 using JimmyBogardRocks;
 //source: http://grabbagoft.blogspot.com/2007/06/generic-value-object-equality.html
 
-namespace SamuraiApp.Domain {
+namespace Firefly.Domain {
   public class PersonFullName : ValueObject<PersonFullName> {
 
     public static PersonFullName Create (string first, string last) {

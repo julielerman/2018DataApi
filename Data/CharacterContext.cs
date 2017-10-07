@@ -1,7 +1,7 @@
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using SamuraiApp.Domain;
- namespace SamuraiApp.Data {
+using Firefly.Domain;
+ namespace Firefly.Data {
 
   public class CharacterContext {
 

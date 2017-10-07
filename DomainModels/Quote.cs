@@ -1,6 +1,6 @@
 using System;
 
-namespace SamuraiApp.Domain
+namespace Firefly.Domain
 {
   public class Quote
   {
