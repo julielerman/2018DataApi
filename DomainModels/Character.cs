@@ -33,10 +33,5 @@ namespace Firefly.Domain {
       IsDirty=true;
     }
     public string EntranceScene => _entrance?.SceneName;
-    
-    
     }
- 
-    
   }
-}

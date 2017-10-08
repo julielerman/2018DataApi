@@ -16,7 +16,7 @@ namespace Firefly.Domain
     public string ActionDescription { get; private set; }
     public Guid CharacterGuidId{get;private set;}
     //hidden ORM "concessions"
-     private int characterId { get;  set; }
+     private int CharacterId { get;  set; }
      private Entrance() { } 
   }
 }
