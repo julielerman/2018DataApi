@@ -15,22 +15,21 @@ namespace Firefly.Domain {
       }
     public int Id { get; private set; }
     public string Name { get; private set; }
-    public Guid GuidId{get;private set;}
     public bool IsDirty {get;private set;}
  
     private readonly List<Quote> _quotes = new List<Quote> ();
     public IEnumerable<Quote> Quotes => _quotes.ToList ();
     public void AddQuote (string quoteText) {
        quoteText=StringManipulators.ReplaceBadWordWithAsterisks(quoteText);
-      _quotes.Add (new Quote(GuidId,quoteText));
-      IsDirty=true;
+      _quotes.Add (new Quote(Id,quoteText));
+ 
     }
   
     private Entrance _entrance;
     private Entrance Entrance { get { return _entrance; } }
     public void CreateEntrance (int minute, string sceneName, string description) {
-      _entrance = new Entrance (GuidId, minute, sceneName, description);
-      IsDirty=true;
+      _entrance = new Entrance (Id, minute, sceneName, description);
+     
     }
     public string EntranceScene => _entrance?.SceneName;
     }
