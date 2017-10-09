@@ -10,6 +10,11 @@ namespace Firefly.Domain
       ActionDescription = description;
       CharacterId=characterId;
     }
+    public void Replace (int movieMinute, string sceneName, string description){
+      MovieMinute = movieMinute;
+      SceneName = sceneName;
+      ActionDescription = description;
+    }
     public int Id { get; private set; }
     public int MovieMinute { get; private set; }
     public string SceneName { get; private set; }
