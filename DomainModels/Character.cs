@@ -28,7 +28,10 @@ namespace Firefly.Domain {
     private Entrance Entrance { get { return _entrance; } }
     public void CreateEntrance (int minute, string sceneName, string description) {
       _entrance = new Entrance (Id, minute, sceneName, description);
-     
+    }
+    public bool HasEntrance => _entrance != null;
+    public void ReplaceEntrance(int minute, string sceneName, string description) {
+      _entrance.Replace(minute, sceneName, description);
     }
     public string EntranceScene => _entrance?.SceneName;
     }
