@@ -7,7 +7,6 @@ namespace Firefly.Domain {
    
     public Character (string name) : this() {
       Name = name;
-      GuidId=Guid.NewGuid();
       IsDirty=true;
     }
     private Character () {
