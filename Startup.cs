@@ -28,7 +28,8 @@ namespace DataAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-       services.AddDbContext<CharacterContext>(options=> options.UseSqlite("Data Source=Techorama2018.db"));
+        services.AddDbContext<CharacterContext>(options=> options.UseSqlite("Data Source=Techorama2018.db"));
+        services.AddScoped<FireflyService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
